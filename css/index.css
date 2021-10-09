@@ -1,1 +1,213 @@
-
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        
+        body {
+            width: 100vw;
+            height: 100vh;
+            background-color: teal;
+        }
+        
+        #wrap {
+            width: 100vw;
+            height: 100vh;
+        }
+        
+        header {
+            height: 10vh;
+            width: 100%;
+            background-color: #69c0ff;
+            display: flex;
+            align-items: center;
+        }
+        
+        .avator {
+            width: 5vh;
+            height: 5vh;
+            border-radius: 5vh;
+            overflow: hidden;
+            position: relative;
+            left: 10vh;
+            animation-name: avatormove;
+            animation-duration: 3s;
+            animation-direction: normal;
+        }
+        
+        @keyframes avatormove {
+            from {
+                left: 0vh;
+                opacity: 0.1;
+                transform: rotate(0dge);
+            }
+            to {
+                left: 10vh;
+                opacity: 1;
+                transform: rotate(360deg);
+            }
+        }
+        
+        .avator img {
+            width: 5vh;
+            height: 5vh;
+        }
+        
+        main {
+            height: 80vh;
+            width: 100%;
+            background-color: #3585d4;
+            font-size: 35px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+        }
+        
+        .content {
+            display: flex;
+            flex-direction: column;
+            align-content: center;
+            justify-content: center;
+            width: 500px;
+        }
+        
+        .context {
+            position: relative;
+            animation-name: conmove;
+            animation-duration: 2s;
+            animation-iteration-count: 1;
+        }
+        
+        @keyframes conmove {
+            10% {
+                top: -200px;
+                transform: rotate(10deg);
+            }
+            30% {
+                transform: rotate(-10deg);
+            }
+            50% {
+                transform: rotate(10deg);
+            }
+            80% {
+                transform: rotate(-10deg);
+            }
+            100% {
+                top: 0px;
+                transform: rotate(0deg);
+            }
+        }
+        
+        .loading {
+            font-size: 25px;
+            align-self: flex-end;
+            /*设置背景渐变色*/
+            background-image: linear-gradient(to right, red, orange, blue, yellow, green, yellow, blue, orange, red, orange, blue, yellow, green, yellow, blue, orange, red);
+            /*chrome私有样式，加前缀，文字显示背景图片*/
+            -webkit-background-clip: text;
+            animation: loadtext 10s linear infinite;
+            /*文字颜色设为透明*/
+            color: transparent;
+            /*宽度固定*/
+            width: 200px;
+        }
+        
+        @keyframes loadtext {
+            0% {
+                background-position: 0 0;
+            }
+            100% {
+                /*宽度固定，如果为百分比背景不会滚动*/
+                background-position: -500px 0;
+            }
+        }
+        
+        .next {
+            width: 150px;
+            height: 50px;
+            color: aliceblue;
+            background-color: #52c41a;
+            font-size: 25px;
+            cursor: pointer;
+            align-self: flex-end;
+            position: relative;
+            right: 20vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            animation-name: nextbox;
+            animation-timing-function: linear;
+            animation-duration: 5s;
+            /* animation-delay: 2.5s; */
+        }
+        
+        @keyframes nextbox {
+            0% {
+                right: 100vw;
+                border-radius: 0px;
+                background-color: #3585d4;
+            }
+            50% {
+                width: 80px;
+                height: 50px;
+                border-radius: 50px;
+            }
+            100% {
+                right: 20vh;
+                border-radius: 10px;
+                background-color: #52c41a;
+            }
+        }
+        
+        footer {
+            height: 10vh;
+            width: 100%;
+            background-color: #69c0ff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .foot {
+            position: relative;
+            animation-name: foottext;
+            animation-duration: 2s;
+            animation-iteration-count: 1;
+            animation-timing-function: linear;
+            animation-delay: 7s;
+            font-weight: 550;
+            font-size: 18px;
+        }
+        
+        @keyframes foottext {
+            0% {
+                bottom: -3vh;
+                color: aliceblue;
+            }
+            80% {
+                bottom: 3vh;
+            }
+            100% {
+                bottom: 0vh;
+                color: black;
+            }
+        }
+        
+        #owrap {
+            position: relative;
+            animation-name: hide;
+            animation-duration: 2s;
+            animation-timing-function: linear;
+            animation-fill-mode: forwards;
+            /*不出来*/
+        }
+        
+        @keyframes hide {
+            from {
+                bottom: 0px;
+            }
+            to {
+                bottom: 100vh;
+            }
+        }
