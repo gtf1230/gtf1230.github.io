@@ -28,10 +28,10 @@
             border-radius: 5vh;
             overflow: hidden;
             position: relative;
-            left: 10vh;
             animation-name: avatormove;
             animation-duration: 3s;
             animation-direction: normal;
+            animation-fill-mode: forwards;
         }
         
         @keyframes avatormove {
@@ -72,15 +72,19 @@
         }
         
         .context {
+            top: -300px;
             position: relative;
             animation-name: conmove;
             animation-duration: 2s;
             animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+            animation-delay: 2.5s;
+            color: #fff;
         }
         
         @keyframes conmove {
             10% {
-                top: -200px;
+                top: -300px;
                 transform: rotate(10deg);
             }
             30% {
@@ -99,6 +103,7 @@
         }
         
         .loading {
+            opacity: 0;
             font-size: 25px;
             align-self: flex-end;
             /*设置背景渐变色*/
@@ -108,15 +113,17 @@
             animation: loadtext 10s linear infinite;
             /*文字颜色设为透明*/
             color: transparent;
-            /*宽度固定*/
             width: 200px;
+            animation-delay: 2.5s;
         }
         
         @keyframes loadtext {
             0% {
+                opacity: 0;
                 background-position: 0 0;
             }
             100% {
+                opacity: 1;
                 /*宽度固定，如果为百分比背景不会滚动*/
                 background-position: -500px 0;
             }
@@ -131,7 +138,7 @@
             cursor: pointer;
             align-self: flex-end;
             position: relative;
-            right: 20vh;
+            right: 101vw;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -139,13 +146,15 @@
             animation-name: nextbox;
             animation-timing-function: linear;
             animation-duration: 5s;
-            /* animation-delay: 2.5s; */
+            animation-delay: 5s;
+            animation-fill-mode: forwards;
         }
         
         @keyframes nextbox {
             0% {
                 right: 100vw;
                 border-radius: 0px;
+                transform: rotate(0deg) rotateY(0deg);
                 background-color: #3585d4;
             }
             50% {
@@ -156,6 +165,7 @@
             100% {
                 right: 20vh;
                 border-radius: 10px;
+                transform: rotate(360deg) rotateY(360deg);
                 background-color: #52c41a;
             }
         }
@@ -175,22 +185,21 @@
             animation-duration: 2s;
             animation-iteration-count: 1;
             animation-timing-function: linear;
-            animation-delay: 7s;
+            animation-delay: 10s;
             font-weight: 550;
             font-size: 18px;
+            color: transparent;
+            animation-fill-mode: forwards;
         }
         
         @keyframes foottext {
             0% {
-                bottom: -3vh;
-                color: aliceblue;
-            }
-            80% {
-                bottom: 3vh;
+                color: black;
+                transform: rotate(0deg) rotateY(0deg);
             }
             100% {
-                bottom: 0vh;
-                color: black;
+                color: #fff;
+                transform: rotate(360deg) rotateY(360deg);
             }
         }
         
