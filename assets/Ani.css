@@ -1,0 +1,33 @@
+.box {
+    width: 100px;
+    height: 100px;
+    background: red;
+}
+
+.box1 {
+    width: 100px;
+    height: 100px;
+    background: blue;
+}
+
+.box2 {
+    width: 100px;
+    height: 100px;
+    background: #ff9100;
+}
+
+.box3 {
+    width: 100px;
+    height: 100px;
+    background: #ff00ea;
+}
+
+.change {
+    animation: move 1s alternate both;
+}
+
+@keyframes move {
+    to {
+        background: yellow;
+    }
+}

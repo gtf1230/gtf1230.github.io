@@ -1,0 +1,36 @@
+<template>
+    <h2 class="art-title" data-id="6">21.10.25 周记</h2>
+    <span class="art-content">
+        这周初步学习了些正则
+        ## 正则
+        ### 正则是用来匹配字符串的
+        下面是正则的一些用法
+        一些特殊字符是无法匹配的 加一个反斜杠\ 只变反斜杠后面的第一个
+        特殊字符 ：/ \ () [] {} \n + * .
+        g global
+        \n 匹配回车
+        \s 匹配空格
+        () 分组 // RegExp.$1 可以匹配到分组里的值 或者第二个参数
+        + 一个或多个
+        \s 空格
+        * 0个或者多个
+        \S 反斜杠加大写字母代表非、
+        \d 数字 \D
+        \w 字母数字下划线_ \W 非字母数字下划线
+        [^\n] 非回车
+        . 匹配回车以外的任何字符
+        检查元素是否符合符合正则表达式的规则，如果符合true ，else false
+        正则.test('string') //true false
+
+        #### 先行断言 hello(?=world)
+        我判断 hello 后面是跟的 world 如果不是，那么匹配不成功
+        hello(?=world) 'helloworld' 可以匹配 hello 不包含world
+        hello(?=world) 'helloabc' 什么也匹配不到
+
+        #### 后行断言 (?=hello)world 
+        我判断 world 前面是跟的 hello 如果不是，那么匹配不成功
+        ## 自定义属性 获取到元素中自定义属性为 data-()的值； 
+        ### 用来匹配自定义属性里的值
+        如果 括号中 写id 那么就是this.dataset.id; this.dataset.id this.getAttribute('data-id') 
+        </span>
+</template>
