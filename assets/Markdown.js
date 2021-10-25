@@ -37,7 +37,6 @@ export default class Markdown {
 // }
 
 
-
 // match方法是匹配所有符合正则表达式的语句，把匹配到的值放到数组中；
 // let res = s.match(/(#+\s*)|\S+|\n/g);
 // console.log(res);
