@@ -5,8 +5,12 @@ body {
 
 #warp {
     min-width: 1400px;
+    & h4{
+        margin: 5px 0px ;
+        font-size: 20px;
+    }
     & #header {
-        background-color: #1890ff;
+        background-color: #002766;
         display: flex;
         justify-content: space-around;
         align-items: center;
@@ -42,12 +46,11 @@ body {
             display: flex;
 
             & .main_content {
-                width: 70%;
-                border-right: 1px solid #ffadd2;
+                width: 80%;
+                border-right: 1px solid #c2c2c2;
 
                 & .content_text {
-                    padding: 10px 0 0 24px;
-                    
+                    padding: 10px 0 0 0px;
                     
                         & .view{
                             margin-left: 10px;
@@ -72,36 +75,37 @@ body {
                     position: relative;
                     left: -900px;
                     font-size: 24px;
-                    padding: 10px 10px 10px;
+                    padding: 5px;
                 }
                 
                 // & .content_one::before {
                 //     content: "//";
                 //     color: #91d5ff;
                 // }
+                & .next{
+                    color: #002766;
+                    cursor: pointer;
+                    left: -900px;
+                }
                 
             }
 
             & .main_list {
-                width: 30%;
+                width: 20%;
                 padding: 20px;
                 font-size: 20px;
-                color: #000;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-
                 & .nav {
-                    width: 50%;
+                    width: 40%;
                     height: 35px;
+                    margin: 10px;
                     display: flex;
                     justify-content: center;
-                    line-height: 35px;
+                    align-items: center;
                     padding: 5px 10px;
                     border-radius: 6px;
-                    margin: 6px 0;
-                    background-color: #91d5ff;
-                    color: #ffffff;
+                    margin:5px 10px;
+                    border:2px solid #1e4f91;
+                    color: #1e4f91;
                 }
             }
         }

@@ -13,7 +13,7 @@ export default class Opicity {
     }
 
     animation(el) {
-        el.classList.add('text-opacity')
+        el.classList.add('content')
         const handleEventlister = function() {
             el.removeEventListener('animationstart', handleEventlister)
         }
