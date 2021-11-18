@@ -1,0 +1,62 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+#wrap {
+  width: 100vw;
+  height: 100vh;
+  background: url(https://external-30160.picsz.qpic.cn/fa0831da1e6f92c78f22e26a1f722845);
+  background-size: 100%;
+}
+#wrap .mask {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+#wrap .mask .avator {
+  margin-top: 30px;
+  height: 210px;
+  width: 210px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid #fff;
+}
+#wrap .mask .avator img {
+  height: 210px;
+}
+#wrap .mask .title {
+  font-size: 30px;
+  color: #fff;
+}
+#wrap .mask .describe {
+  border-top: 2px solid rgba(255, 255, 255, 0.5);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+  padding: 20px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  color: #ccc;
+}
+#wrap .mask .stayword {
+  font-size: 18px;
+  color: #ccc;
+}
+#wrap .mask .btn {
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 15px;
+  color: #fff;
+  cursor: pointer;
+}
+#wrap .mask .footer {
+  font-size: 12px;
+  color: #ccc;
+}
+
